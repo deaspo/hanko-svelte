@@ -3,5 +3,6 @@
     import LogoutButton from "../../components/LogoutButton.svelte";
 </script>
 
+<!--
 <HankoProfile/>
-<LogoutButton/>
+<LogoutButton/>-->

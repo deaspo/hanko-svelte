@@ -3,8 +3,7 @@
 	import Header from '$lib/components/Header.svelte';
 </script>
 
-<Header />
 <main>
+	<Header />
 	<slot />
 </main>
-<Footer />

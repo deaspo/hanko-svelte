@@ -15,5 +15,22 @@
     });
   });
 </script>
+<div class="flex items-center justify-center m-auto min-w-xs max-w-xs h-full p-4">
+    <hanko-auth on:onAuthFlowCompleted={redirectAfterLogin} />
+</div>
 
-<hanko-auth on:onAuthFlowCompleted={redirectAfterLogin} />
+<style>
+    hanko-auth::part(container) {
+        background-color: var(--background-color, white);
+        padding: var(--container-padding, 0);
+        max-width: var(--container-max-width, 410px);
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        align-content: flex-start;
+        box-sizing: border-box;
+        margin-top: 50%;
+        }
+</style>
