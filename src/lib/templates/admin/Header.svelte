@@ -14,6 +14,7 @@
 	import { clickOutside } from '$lib/ioevents/click'
 	import { keydownEscape } from '$lib/ioevents/keydown'
 	import { Hanko } from "@teamhanko/hanko-elements";
+	import ToggleTheme from "$lib/templates/admin/ToggleTheme.svelte";
 
 	const hankoApi = env.PUBLIC_HANKO_API_URL
 
@@ -75,6 +76,10 @@
 
 		<div class:w-full={!withSearch}>
 			<ul class="flex justify-end items-center flex-shrink-0 space-x-6">
+				<!-- Theme toolbar -->
+				<li class="flex">
+					<ToggleTheme />
+				</li>
 				<!-- Notifications menu -->
 				<li class="relative">
 					<button

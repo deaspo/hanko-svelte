@@ -1,9 +1,17 @@
 <script lang="ts">
   import { env } from "$env/dynamic/public";
   import Header from "$lib/templates/admin/Header.svelte";
-  import { isSideMenuOpen } from "$stores/menus";
+  import { isDark, isSideMenuOpen } from "$stores/menus";
   import SideBar from "$lib/templates/admin/SideBar.svelte";
   import { Hanko } from "@teamhanko/hanko-elements";
+  import {browser} from "$app/environment";
+  import HtmlHead from '$lib/templates/admin/html_head.svelte';
+
+  if (browser && localStorage.theme === 'dark') {
+    isDark.update(value => true);
+  } else{
+    isDark.update(value => false)
+  }
 
   const hankoApi = env.PUBLIC_HANKO_API_URL
 
@@ -20,6 +28,8 @@
     updateLoggedUserEmail();
   }
 </script>
+
+<HtmlHead {isDark} />
 
 <section id="body">
   <div
