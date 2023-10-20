@@ -1,29 +1,28 @@
 <script lang="ts">
-	import { goto } from '$app/navigation'
-	import { env } from '$env/dynamic/public'
+	import { goto } from "$app/navigation";
+	import { env } from "$env/dynamic/public";
+	import { clickOutside } from "$lib/ioevents/click";
+	import { keydownEscape } from "$lib/ioevents/keydown";
+	import ToggleTheme from "$lib/templates/admin/ToggleTheme.svelte";
 	import {
-		isDark,
+		closeNotificationsMenu,
+		closeProfileMenu,
 		isNotificationsMenuOpen,
 		isProfileMenuOpen,
-		toggleSideMenu,
 		toggleNotificationsMenu,
 		toggleProfileMenu,
-		closeNotificationsMenu,
-		closeProfileMenu
-	} from '$stores/menus'
-	import { clickOutside } from '$lib/ioevents/click'
-	import { keydownEscape } from '$lib/ioevents/keydown'
-	import ToggleTheme from '$lib/templates/admin/ToggleTheme.svelte'
-	import { onMount } from 'svelte'
+		toggleSideMenu
+	} from "$stores/menus";
+	import { onMount } from "svelte";
 
 	const hankoApi = env.PUBLIC_HANKO_API_URL
-	let hanko
+	let hanko;
 
 	const logout = () => {
 		hanko.user
 			.logout()
 			.then(() => {
-				goto('/login')
+				goto('/login').then(() => window.location.reload());
 			})
 			.catch((error) => {
 				// handle error
@@ -46,16 +45,16 @@
 	>
 		<!-- Mobile hamburger -->
 		<button
-			id="nav-mobile-hamburger"
-			class="p-1 mr-5 -ml-1 rounded-md md:hidden focus:outline-none focus:shadow-outline-purple"
-			on:click={toggleSideMenu}
 			aria-label="Menu"
+			class="p-1 mr-5 -ml-1 rounded-md md:hidden focus:outline-none focus:shadow-outline-purple"
+			id="nav-mobile-hamburger"
+			on:click={toggleSideMenu}
 		>
-			<svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
+			<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
 				<path
-					fill-rule="evenodd"
-					d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
 					clip-rule="evenodd"
+					d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+					fill-rule="evenodd"
 				/>
 			</svg>
 		</button>
@@ -91,15 +90,15 @@
 				<!-- Notifications menu -->
 				<li class="relative">
 					<button
-						id="nav-notification-btn"
-						class="relative align-middle rounded-md focus:outline-none focus:shadow-outline-purple"
-						on:click={toggleNotificationsMenu}
-						use:keydownEscape
-						on:keydown-escape={closeNotificationsMenu}
-						aria-label="Notifications"
 						aria-haspopup="true"
+						aria-label="Notifications"
+						class="relative align-middle rounded-md focus:outline-none focus:shadow-outline-purple"
+						id="nav-notification-btn"
+						on:click={toggleNotificationsMenu}
+						on:keydown-escape={closeNotificationsMenu}
+						use:keydownEscape
 					>
-						<svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
+						<svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
 							<path
 								d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"
 							/>
@@ -157,13 +156,13 @@
 				<!-- Profile menu -->
 				<li class="relative">
 					<button
-						id="nav-profile-photo"
-						class="align-middle rounded-full focus:shadow-outline-purple focus:outline-none"
-						on:click={toggleProfileMenu}
-						use:keydownEscape
-						on:keydown-escape={closeProfileMenu}
-						aria-label="Account"
 						aria-haspopup="true"
+						aria-label="Account"
+						class="align-middle rounded-full focus:shadow-outline-purple focus:outline-none"
+						id="nav-profile-photo"
+						on:click={toggleProfileMenu}
+						on:keydown-escape={closeProfileMenu}
+						use:keydownEscape
 					>
 						{user}
 					</button>
