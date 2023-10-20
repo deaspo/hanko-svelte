@@ -13,11 +13,14 @@
     isDark.update(value => false)
   }
 
-  const hankoApi = env.PUBLIC_HANKO_API_URL
-
-  const hanko = new Hanko(hankoApi);
-
+  const hankoApi = env.PUBLIC_HANKO_API_URL;
   let currentUser = "Unknown user";
+  let hanko: any;
+
+  if (browser) {
+    hanko = new Hanko(hankoApi);
+  }
+
   function updateLoggedUserEmail() {
     hanko.user.getCurrent().then((user: any) => {
       currentUser = user.email;
@@ -27,6 +30,7 @@
   $:if (hanko) {
     updateLoggedUserEmail();
   }
+
 </script>
 
 <HtmlHead {isDark} />

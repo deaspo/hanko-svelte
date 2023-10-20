@@ -29,10 +29,73 @@
 	export let withTitle = true
 	export let links = [
 		{
-			name: 'Dashboard',
+			name: 'Presentation',
 			url: '/dashboard',
 			svg: [
+				'M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122'
+			]
+		},
+		{
+			name: 'Svelte',
+			url: '/dashboard/svelte',
+			svg: [
 				'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6'
+			]
+		},
+		{
+			name: 'SvelteKit',
+			url: '/dashboard/sveltekit',
+			svg: [
+				'M9 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6'
+			]
+		},
+		{
+			name: 'Routing',
+			url: '/dashboard/routing',
+			svg: [
+				'M15 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6'
+			]
+		},
+		{
+			name: 'Loading Data',
+			url: '/dashboard/loadData',
+			svg: [
+				'M16 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6'
+			]
+		},
+		{
+			name: 'Sending Data',
+			url: '/dashboard/sendData',
+			svg: [
+				'M17 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6'
+			]
+		},
+		{
+			name: 'Api Routes',
+			url: '/dashboard/apiRoutes',
+			svg: [
+				'M18 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6'
+			]
+		},
+		{
+			name: 'Shipped stores',
+			url: '/dashboard/stores',
+			svg: [
+				'M19 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6'
+			]
+		},
+		{
+			name: 'Hooks',
+			url: '/dashboard/hooks',
+			svg: [
+				'M20 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6'
+			]
+		},
+		{
+			name: 'Page Options',
+			url: '/dashboard/pageOptions',
+			svg: [
+				'M21 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6'
 			]
 		},
 		{
@@ -73,7 +136,6 @@
 		},
 		{ name: 'Tables', url: '/dashboard/tables', svg: ['M4 6h16M4 10h16M4 14h16M4 18h16'] },
 		{ name: 'Components', url: '/dashboard/components', svg: ['M4 6h16M4 10h16M4 14h16M4 18h16'] },
-		{ name: 'Demo app', url: '/dashboard/demoApp', svg: ['M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z'] },
 	]
 </script>
 

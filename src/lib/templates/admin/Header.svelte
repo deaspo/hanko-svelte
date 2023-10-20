@@ -16,7 +16,7 @@
 	import { Hanko } from "@teamhanko/hanko-elements";
 	import ToggleTheme from "$lib/templates/admin/ToggleTheme.svelte";
 
-	const hankoApi = env.PUBLIC_HANKO_API_URL
+	const hankoApi = env.PUBLIC_HANKO_API_URL;
 
 	const hanko = new Hanko(hankoApi)
 
