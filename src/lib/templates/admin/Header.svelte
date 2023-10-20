@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { goto } from "$app/navigation";
-	import { env } from "$env/dynamic/public";
+	import { goto } from '$app/navigation'
+	import { env } from '$env/dynamic/public'
 	import {
 		isDark,
 		isNotificationsMenuOpen,
@@ -13,23 +13,31 @@
 	} from '$stores/menus'
 	import { clickOutside } from '$lib/ioevents/click'
 	import { keydownEscape } from '$lib/ioevents/keydown'
-	import { Hanko } from "@teamhanko/hanko-elements";
-	import ToggleTheme from "$lib/templates/admin/ToggleTheme.svelte";
+	import ToggleTheme from '$lib/templates/admin/ToggleTheme.svelte'
+	import { onMount } from 'svelte'
 
-	const hankoApi = env.PUBLIC_HANKO_API_URL;
-
-	const hanko = new Hanko(hankoApi)
+	const hankoApi = env.PUBLIC_HANKO_API_URL
+	let hanko
 
 	const logout = () => {
-		hanko.user.logout().then(() => {
-			goto('/login');
-		}).catch((error) => {
-			// handle error
-		})
+		hanko.user
+			.logout()
+			.then(() => {
+				goto('/login')
+			})
+			.catch((error) => {
+				// handle error
+			})
 	}
 
 	export let user: any
 	let withSearch = true
+
+	onMount(() => {
+		import('@teamhanko/hanko-elements').then((result) => {
+			hanko = new result.Hanko(hankoApi)
+		})
+	})
 </script>
 
 <header class="z-10 py-4 bg-white shadow-md dark:bg-gray-800">
