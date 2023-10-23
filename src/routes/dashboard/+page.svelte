@@ -1,7 +1,7 @@
 <script lang="ts">
-  import Slides from '$lib/deck/slides.svelte';
-  import Slide from '$lib/deck/slide.svelte';
-  import Code from '$lib/deck/code.svelte';
+  import Code from "$lib/deck/code.svelte";
+  import Slide from "$lib/deck/slide.svelte";
+  import Slides from "$lib/deck/slides.svelte";
   import { toggleSideMenu } from "$stores/menus";
   import { onMount, tick } from "svelte";
 
@@ -54,12 +54,12 @@
 <Slides>
 
   <!-- Introduction Svelte -->
-  <Slide id="animate" animate>
-    <Slide id="animate" animate>
+  <Slide animate id="animate">
+    <Slide animate id="animate">
       <h3 class="text-xl font-bold dark:text-gray-300 capitalize">Svelte Presentation🔥</h3>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <h3 class="text-xl font-bold dark:text-gray-300 capitalize">Svelte</h3>
       <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <p class="text-sm text-gray-600 dark:text-gray-400"> Svelte is a <strong>component</strong> framework</p>
@@ -68,12 +68,12 @@
   </Slide>
 
   <!-- Reactivity -->
-  <Slide id="animate" animate>
-    <Slide id="animate" animate>
+  <Slide animate id="animate">
+    <Slide animate id="animate">
       <h4 class="mb-4 text-lg font-semibold dark:text-gray-300">Reactivity</h4>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <h4 class="mb-4 text-lg font-semibold dark:text-gray-300">Reactivity</h4>
       <div class="px-4 py-3 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <p class="text-sm text-gray-600 dark:text-gray-400"> Reactivity is triggered by <strong>assignment "="</strong></p>
@@ -103,15 +103,15 @@
   </Slide>
 
   <!-- DOM Events -->
-  <Slide id="animate" animate>
-    <Slide id="animate" animate>
+  <Slide animate id="animate">
+    <Slide animate id="animate">
       <h4 class="mb-4 text-lg font-semibold dark:text-gray-300">DOM Events</h4>
       <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <p class="text-md text-gray-600 dark:text-gray-400"> Supports listening to an DOM events on an element. DOM event handlers can have modifiers that alter their behaviour.</p>
       </div>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <p class="text-md text-gray-600 dark:text-gray-400"> E.g. button click</p>
       <div class="px-4 py-3 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <Code>
@@ -128,7 +128,7 @@
       </div>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <p class="text-md text-gray-600 dark:text-gray-400"> There is also support for component events</p>
       <div class="px-4 py-3 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <Code>
@@ -147,26 +147,26 @@
 
 
   <!-- Data Flow -->
-  <Slide id="animate" animate>
+  <Slide animate id="animate">
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <h4 class="mb-4 text-lg font-semibold dark:text-gray-300">Data Flow</h4>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <h4 class="mb-4 text-lg font-semibold dark:text-gray-300">Data Flow</h4>
       <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md space-y-2 dark:bg-gray-800">
         <p class="text-gray-600 dark:text-gray-400">As a general rule, data flow in Svelte is top down — a parent component can set props on a child component, and a component can set attributes on an element, but not the other way around</p>
       </div>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md space-y-2 dark:bg-gray-800">
         <p class="text-gray-600 dark:text-gray-400">The rule can be broken with use of <span class="bg-green-800" ><strong>binding</strong> directive</span></p>
       </div>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <h4 class="mb-4 text-lg font-semibold dark:text-gray-300">Data Flow</h4>
       <p class="text-md text-gray-600 dark:text-gray-400"> Example button click</p>
       <div class="px-4 py-3 bg-white rounded-lg shadow-md dark:bg-gray-800">
@@ -181,12 +181,12 @@
   </Slide>
 
   <!-- Life Cycle -->
-  <Slide id="animate" animate>
-    <Slide id="animate" animate>
+  <Slide animate id="animate">
+    <Slide animate id="animate">
       <h4 class="mb-4 text-lg font-semibold dark:text-gray-300">Components Life cycle</h4>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md space-y-2 dark:bg-gray-800">
         <ol class="list-decimal px-4">
           <li>onMount</li>
@@ -198,56 +198,56 @@
       </div>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <p class="text-md text-gray-600 dark:text-gray-400"> onMount (similar to React useEffect)</p>
       <div class="px-4 py-3 mb-4 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <p class="text-gray-600 dark:text-gray-400">Runs after the component is first rendered to the DOM.</p>
       </div>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <p class="text-md text-gray-600 dark:text-gray-400"> beforeUpdate and afterUpdate</p>
       <div class="px-4 py-3 mb-4 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <p class="text-gray-600 dark:text-gray-400">BeforeUpdate function schedules work to happen immediately before the DOM is updated. afterUpdate is its counterpart, used for running code once the DOM is in sync with your data.</p>
       </div>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <p class="text-md text-gray-600 dark:text-gray-400"> tick</p>
       <div class="px-4 py-3 mb-4 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <p class="text-gray-600 dark:text-gray-400">Can be called anytime, It returns a promise that resolves as soon as any pending state changes have been applied to the DOM (or immediately, if there are no pending state changes). </p>
       </div>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <p class="text-md text-gray-600 dark:text-gray-400"> Example for tick()</p>
       <div class="px-4 py-3 mb-4 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <textarea
           class="w-full resize-none text-gray-600 dark:text-gray-400 bg-white dark:bg-gray-800"
-          value={text}
           on:keydown|preventDefault={handleKeyDownBefore}
+          value={text}
         />
         <p class="text-md text-gray-600 dark:text-gray-400"> After fix</p>
         <textarea
           class="w-full resize-none text-gray-600 dark:text-gray-400 bg-white dark:bg-gray-800"
-          value={textFix}
           on:keydown|preventDefault={handleKeyDownAfterFix}
+          value={textFix}
         />
       </div>
     </Slide>
   </Slide>
 
   <!-- Stores -->
-  <Slide id="animate" animate>
-    <Slide id="animate" animate>
+  <Slide animate id="animate">
+    <Slide animate id="animate">
       <h4 class="mb-4 text-lg font-semibold dark:text-gray-300">Stores</h4>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <p class="text-md text-gray-600 dark:text-gray-400"> An object with <i>subscribe</i> and <i>subscribe</i> method that allows interested parties to be notified whenever the store value changes. Has also <span class="bg-green-800" ><i>set</i></span> and <span class="bg-green-800" ><i>update</i></span> methods.</p>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md space-y-2 dark:bg-gray-800">
         <ol class="list-decimal px-4">
           <li><samp>writable</samp> store - has both <span class="bg-green-800" ><i>set</i></span> and <span class="bg-green-800" ><i>update</i></span> methods</li>
@@ -260,12 +260,12 @@
   </Slide>
 
   <!-- Svelte kit -->
-  <Slide id="animate" animate>
-    <Slide id="animate" animate>
+  <Slide animate id="animate">
+    <Slide animate id="animate">
       <h3 class="text-xl font-bold dark:text-gray-300 capitalize">SvelteKit</h3>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <h3 class="text-xl font-bold dark:text-gray-300 capitalize">SvelteKit</h3>
       <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <p class="text-md text-gray-600 dark:text-gray-400"> Svelte is a <strong>app</strong> framework that solves the problem of building production ready applications.</p>
@@ -280,18 +280,18 @@
       </div>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <h4 class="mb-4 text-lg font-semibold dark:text-gray-300">Render mechanism</h4>
       <div class="px-4 py-3 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <p class="text-md text-gray-600 dark:text-gray-400"> Apps are server-rendered by default for excellent first load performance and SEO characteristics, but can then transition to client-side navigation (like SPAs) to avoid jankily reloading everything when the user navigates.</p>
       </div>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <h4 class="mb-4 text-lg font-semibold dark:text-gray-300">Bundler - Vite</h4>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <h4 class="mb-4 text-xl font-semibold dark:text-gray-300"><span class="text-red-400">Note!</span></h4>
       <div class="px-4 py-3 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <p class="text-md text-gray-600 dark:text-gray-400">
@@ -304,26 +304,26 @@
 
 
   <!-- Routing -->
-  <Slide id="animate" animate>
-    <Slide id="animate" animate>
+  <Slide animate id="animate">
+    <Slide animate id="animate">
       <h3 class="text-xl font-bold dark:text-gray-300 capitalize">Routing</h3>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <h3 class="text-xl font-bold dark:text-gray-300 capitalize">Routng</h3>
       <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <p class="text-md text-gray-600 dark:text-gray-400">Uses filesystem-based routing</p>
       </div>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <h4 class="mb-4 text-lg font-semibold dark:text-gray-300">Pages</h4>
       <div class="px-4 py-3 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <p class="text-md text-gray-600 dark:text-gray-400">The url resolves to a <span class="bg-green-800"><samp>+page.svelte</samp></span> component</p>
       </div>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <h4 class="mb-4 text-xl font-semibold dark:text-gray-300"><span class="text-red-400">Note!</span></h4>
       <div class="px-4 py-3 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <p class="text-md text-gray-600 dark:text-gray-400">
@@ -332,7 +332,7 @@
       </div>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <h4 class="mb-4 text-md font-semibold dark:text-gray-300">Folder structure example</h4>
       <div class="text-left px-4 py-3 mb-4 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <p class="text-sm text-gray-600 dark:text-gray-400"> Common UI are placed in <span class="bg-green-800"><samp>+layout.svelte</samp></span> component</p>
@@ -344,19 +344,19 @@
   </Slide>
 
   <!-- Loading Data -->
-  <Slide id="animate" animate>
-    <Slide id="animate" animate>
+  <Slide animate id="animate">
+    <Slide animate id="animate">
       <h3 class="text-xl font-bold dark:text-gray-300 capitalize">Loading data from the server</h3>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <h3 class="text-xl font-bold dark:text-gray-300 capitalize">Loading data</h3>
       <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <p class="text-gray-600 dark:text-gray-400">Get data needed by the route through the <samp><code>load function</code></samp> defined on <samp><code>+page(layout).server.ts(js)</code></samp> or <samp><code>+page(layout).ts(js)</code></samp> modules. <strong>*.server</strong> module only runs on the server.</p>
       </div>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <h4 class="mb-4 text-lg font-semibold dark:text-gray-300">Universal vs. Server</h4>
       <div class="text-left px-4 py-3 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <ul class="list-disc px-4 space-y-2">
@@ -366,7 +366,7 @@
       </div>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <h3 class="text-xl mb-4 font-bold dark:text-gray-300">Input available</h3>
       <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <Code>
@@ -385,7 +385,7 @@
       </div>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <ul class="list-disc px-4">
           <li class="text-gray-600 dark:text-gray-400"> <span class="bg-gray-600"><samp>ServerLoadEvent</samp></span> - clientAddress, cookies, locale, platform, request functions</li>
@@ -397,12 +397,12 @@
   </Slide>
 
   <!-- Sending Data -->
-  <Slide id="animate" animate>
-    <Slide id="animate" animate>
+  <Slide animate id="animate">
+    <Slide animate id="animate">
       <h3 class="text-xl font-bold dark:text-gray-300 capitalize">Sending data to the server</h3>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <h3 class="text-xl font-bold dark:text-gray-300">The &#60;form&#62; element</h3>
       <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <p class="text-gray-600 dark:text-gray-400">
@@ -413,7 +413,7 @@
       </div>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <p class="text-sm text-gray-600 dark:text-gray-400">Example for action function</p>
       <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <Code>
@@ -430,7 +430,7 @@
       </div>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <p class="text-sm text-gray-600 dark:text-gray-400">Example for action function</p>
       <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <Code>
@@ -451,14 +451,14 @@
       </div>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <h3 class="text-xl mb-4 font-bold dark:text-gray-300">use:enhance</h3>
       <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <p class="text-gray-600 dark:text-gray-400"> When JS is enabled, <span class="bg-gray-600">use:enhance</span> will emulate the browser-native behaviour except for the full-page reloads. Can be used to cancel() submission, handle redirects, whether to reset the form or not</p>
       </div>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <p class="text-sm text-gray-600 dark:text-gray-400">Validation</p>
       <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <p class="text-gray-600 dark:text-gray-400"> Support both server validation and external validation from package like Zod</p>
@@ -468,12 +468,12 @@
 
 
   <!-- API Routes -->
-  <Slide id="animate" animate>
-    <Slide id="animate" animate>
+  <Slide animate id="animate">
+    <Slide animate id="animate">
       <h3 class="text-xl font-bold dark:text-gray-300 capitalize">API Routes</h3>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <h3 class="text-xl font-bold dark:text-gray-300 capitalize">API Routes</h3>
       <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <p class="text-md text-gray-600 dark:text-gray-400">
@@ -485,12 +485,12 @@
 
 
   <!-- Stores -->
-  <Slide id="animate" animate>
-    <Slide id="animate" animate>
+  <Slide animate id="animate">
+    <Slide animate id="animate">
       <h3 class="text-xl font-bold dark:text-gray-300">Shipped stores</h3>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <h3 class="text-xl font-bold dark:text-gray-300">Shipped stores</h3>
       <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <p class="text-md text-gray-600 dark:text-gray-400">
@@ -499,7 +499,7 @@
       </div>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <h3 class="text-xl mb-4 font-bold dark:text-gray-300">page</h3>
       <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <ul class="list-disc px-4 space-y-2">
@@ -517,12 +517,12 @@
 
 
   <!-- Hooks -->
-  <Slide id="animate" animate>
-    <Slide id="animate" animate>
+  <Slide animate id="animate">
+    <Slide animate id="animate">
       <h3 class="text-xl font-bold dark:text-gray-300">Hooks</h3>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <h3 class="text-xl font-bold dark:text-gray-300">Hooks</h3>
       <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <p class="text-gray-600 dark:text-gray-400">
@@ -531,7 +531,7 @@
       </div>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <h3 class="text-xl mb-4 font-bold dark:text-gray-300">Available hooks</h3>
       <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <ul class="list-disc px-4 space-y-2">
@@ -542,7 +542,7 @@
       </div>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <h3 class="text-xl mb-4 font-bold dark:text-gray-300">Input available</h3>
       <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <ul class="list-disc px-4 space-y-2">
@@ -556,12 +556,12 @@
   </Slide>
 
   <!-- Page options -->
-  <Slide id="animate" animate>
-    <Slide id="animate" animate>
+  <Slide animate id="animate">
+    <Slide animate id="animate">
       <h3 class="text-xl font-bold dark:text-gray-300">Page Options</h3>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <h3 class="text-xl font-bold dark:text-gray-300">Page Options</h3>
       <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <p class="text-gray-600 dark:text-gray-400">
@@ -570,7 +570,7 @@
       </div>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <h3 class="text-xl font-bold dark:text-gray-300">Options</h3>
       <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <ul class="list-disc px-4 space-y-2">
@@ -579,7 +579,7 @@
       </div>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <h3 class="text-xl font-bold dark:text-gray-300">Options</h3>
       <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <ul class="list-disc px-4 space-y-2">
@@ -588,7 +588,7 @@
       </div>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <h3 class="text-xl font-bold dark:text-gray-300">Options</h3>
       <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <ul class="list-disc px-4 space-y-2">
@@ -597,7 +597,7 @@
       </div>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <h3 class="text-xl font-bold dark:text-gray-300">Options</h3>
       <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <ul class="list-disc px-4 space-y-2">
@@ -606,7 +606,7 @@
       </div>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <p class="text-md text-gray-600 dark:text-gray-400">
           You can mix and match these options in different areas of your app — you could prerender your marketing pages, dynamically server-render your data-driven pages, and treat your admin pages as a client-rendered SPA.
@@ -622,12 +622,12 @@
   </Slide>
 
   <!-- Drawbacks -->
-  <Slide id="animate" animate>
-    <Slide id="animate" animate>
+  <Slide animate id="animate">
+    <Slide animate id="animate">
       <h3 class="text-xl font-bold dark:text-gray-300">Drawbacks</h3>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <h3 class="text-xl font-bold dark:text-gray-300">Draw</h3>
       <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <p class="text-md text-gray-600 dark:text-gray-400">
@@ -636,7 +636,7 @@
       </div>
     </Slide>
 
-    <Slide id="animate" animate>
+    <Slide animate id="animate">
       <h3 class="text-xl font-bold dark:text-gray-300">TypeScript</h3>
       <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <p class="text-md text-gray-600 dark:text-gray-400">
@@ -645,11 +645,32 @@
       </div>
     </Slide>
 
-    <Slide id="animate" animate>
-      <h3 class="text-xl font-bold dark:text-gray-300">External packages</h3>
+    <!-- External packages -->
+    <Slide animate id="animate">
+      <h3 class="text-xl font-bold dark:text-gray-300">Installing packages (support)</h3>
       <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <p class="text-md text-gray-600 dark:text-gray-400">
           It applies <samp>"type":"module"</samp> - means that .js files are treated as native JavaScript modules by default, rather than the legacy CommonJS format.
+        </p>
+      </div>
+    </Slide>
+
+    <!-- IDE issues -->
+    <Slide animate id="animate">
+      <h3 class="text-xl font-bold dark:text-gray-300">WebStorm (IDE) issues</h3>
+      <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
+        <p class="text-md text-gray-600 dark:text-gray-400">
+          Svelte LS tries to parse TS files as Svelte files and subsequently the <a href="https://youtrack.jetbrains.com/issue/WEB-62710/Svelte-Language-Server-Svelte-File-path-to-file-is-not-a-module.error-shown-when-importing-a-.ts-file-in-.svelte">errors appear in Svelte files</a> because parsing error is not a module.
+        </p>
+      </div>
+    </Slide>
+
+    <!-- ssr issues -->
+    <Slide animate id="animate">
+      <h3 class="text-xl font-bold dark:text-gray-300">SSR issues</h3>
+      <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
+        <p class="text-md text-gray-600 dark:text-gray-400">
+          With ssr off, <span class="bg-green-9800">(some* )imports and variable definitions</span> have to performed differently i.e. onMount since they cannot be evaluated on the server-side. Resulting errors are unpredictable and hard to fix. No full documentation yet about this issue.
         </p>
       </div>
     </Slide>
