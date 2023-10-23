@@ -79,6 +79,9 @@
         <p class="text-sm text-gray-600 dark:text-gray-400"> Reactivity is triggered by <strong>assignment "="</strong></p>
       </div>
       <p class="text-sm mb-8 text-gray-600 dark:text-gray-400"> Rule of thumb: <span class="bg-green-800" ><strong> the name of the updated variable must appear on the left hand side of the assignment</strong></span></p>
+    </Slide>
+
+    <Slide animate id="animate">
       <p class="text-sm text-gray-600 dark:text-gray-400"> Using array methods like push and splice won't automatically cause updates</p>
       <div class="px-4 py-3 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <Code>
