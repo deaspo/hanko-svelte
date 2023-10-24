@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { closeSideMenu, pageMenus, togglePageMenu, toggleSideMenu } from '$stores/menus'
-	import { page } from '$app/stores'
-	import { goto } from '$app/navigation'
+	import { goto } from "$app/navigation";
+	import { page } from "$app/stores";
+	import { closeSideMenu, pageMenus, togglePageMenu } from "$stores/menus";
 
 	const appName = import.meta.env.VITE_APP_NAME
 
@@ -110,14 +110,6 @@
 			url: '/dashboard/cards',
 			svg: [
 				'M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10'
-			]
-		},
-		{
-			name: 'Charts',
-			url: '/dashboard/charts',
-			svg: [
-				'M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z',
-				'M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z'
 			]
 		},
 		{

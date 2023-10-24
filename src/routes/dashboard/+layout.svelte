@@ -3,10 +3,10 @@
   import Header from "$lib/templates/admin/Header.svelte";
   import { isDark, isSideMenuOpen } from "$stores/menus";
   import SideBar from "$lib/templates/admin/SideBar.svelte";
-  import {browser} from "$app/environment";
-  import HtmlHead from '$lib/templates/admin/html_head.svelte';
+  import { browser } from "$app/environment";
+  import HtmlHead from "$lib/templates/admin/html_head.svelte";
   import { onMount } from "svelte";
-//import { Hanko } from "@teamhanko/hanko-elements";
+
   if (browser && localStorage.theme === 'dark') {
     isDark.update(value => true);
   } else{
