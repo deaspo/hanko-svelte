@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { register } from '@teamhanko/hanko-elements'
-	import { onMount } from 'svelte'
-	import { env } from '$env/dynamic/public'
-	import { goto } from '$app/navigation'
+	import { goto } from "$app/navigation";
+	import { env } from "$env/dynamic/public";
+	import { register } from "@teamhanko/hanko-elements?client";
+	import { onMount } from "svelte";
 
 	const hankoApi = env.PUBLIC_HANKO_API_URL
 
@@ -26,9 +26,9 @@
 
 <style>
 	hankoProfile {
-		min-width: 100%;
 		display: flex;
 		flex-direction: column;
+		min-width: 100%;
 		}
 	hanko-profile::part(container) {
 		min-width: 100%;
