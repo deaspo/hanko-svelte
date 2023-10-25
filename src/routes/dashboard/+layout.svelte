@@ -15,16 +15,11 @@
 
   const hankoApi = env.PUBLIC_HANKO_API_URL;
   let currentUser = "Unknown user";
-  let hanko;
 
-  onMount(() => {
-    import("@teamhanko/hanko-elements").then((result) => {
-      hanko = new result.Hanko(hankoApi);
-
-      hanko.user.getCurrent().then((user: any) => {
-        currentUser = user.email;
-      })
-    })
+  onMount(async () => {
+    const Hanko = (await import('@teamhanko/hanko-elements')).Hanko
+    let hanko = new Hanko(hankoApi);
+    currentUser = (await hanko.user.getCurrent()).email;
   })
 
 </script>
