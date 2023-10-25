@@ -6,6 +6,8 @@
   import { browser } from "$app/environment";
   import HtmlHead from "$lib/templates/admin/html_head.svelte";
   import { onMount } from "svelte";
+  // iso -imports - https://github.com/bluwy/vite-plugin-iso-import
+  import { Hanko } from "@teamhanko/hanko-elements?client";
 
   if (browser && localStorage.theme === 'dark') {
     isDark.update(value => true);
@@ -17,7 +19,8 @@
   let currentUser = "Unknown user";
 
   onMount(async () => {
-    const Hanko = (await import('@teamhanko/hanko-elements')).Hanko
+    // See issue - https://kit.svelte.dev/docs/faq#how-do-i-use-x-with-sveltekit-how-do-i-use-a-client-side-only-library-that-depends-on-document-or-window
+    //const Hanko = (await import('@teamhanko/hanko-elements')).Hanko
     let hanko = new Hanko(hankoApi);
     currentUser = (await hanko.user.getCurrent()).email;
   })
